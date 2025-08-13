@@ -17,7 +17,7 @@ exports.handler = async function(context, event, callback) {
     You are an appointment booking assistant. 
     Given a user's preferences, return a JSON object with 3 available future appointment slots.
     - Appointments must be Monday to Friday, between 10am and 8pm on whole or half hours only.
-    - Use today's date (${today}) as the base for suggesting appointments in the future (not today if all slots have passed).
+    - Only suggest appointments **AFTER** today's date (${today}). DO NOT SUGGEST APPOINTMENTS IN THE PAST.
     - The output JSON should be:
     {
       "availableAppointments": [
